@@ -1,1 +1,32 @@
-h1{display: none;}
+h2 {
+    text-align: center;
+}
+
+@font-face {
+    font-family: Mukta-Bold;
+    font-weight: 400;
+    font-style: normal;
+    src: url('/res/font/Mukta-Bold.woff2') format('truetype');
+}
+
+@font-face {
+    font-family: Mukta-Regular;
+    font-weight: 400;
+    font-style: normal;
+    src: url('/res/font/Mukta-Regular.woff2') format('truetype');
+}
+
+body {
+    font-family: Mukta-Regular;
+    color: white;
+    background-color: rgb(22, 22, 22);
+}
+
+.download_button{
+    border-radius: 8px;
+    padding: 10px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+}
