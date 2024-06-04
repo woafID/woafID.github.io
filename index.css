@@ -17,16 +17,42 @@ h1 {
 }
 
 body {
+    margin: 0%;
+    padding: 0%;
     font-family: Mukta-Regular;
     color: white;
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(37, 37, 37);
+}
+
+
+.useraccount{
+    margin-left: auto;
+    margin-right: 10px;
+    background-image: url("./res/img/useraccount.png");
+    background-size: contain;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+}
+
+.header{
+    padding-top: 10px;
+    background-color: rgb(61, 61, 61);
+    height: 60px;
 }
 
 .download_button{
+    background-color: transparent;
     border-radius: 8px;
     padding: 10px;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
+}
+a{
+    color: white;
+    text-decoration: none;
 }
