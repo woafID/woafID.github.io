@@ -29,6 +29,7 @@ body {
     justify-content: center;
     align-items: center;
 
+    user-select: none;
     border-style: solid;
     border-width: 0.2rem;
     border-color: rgb(134, 134, 134);
@@ -42,6 +43,24 @@ body {
     right: 70px;
 }
 
+.logo{
+    left: 10px;
+    top: 2px;
+    background-image: url("./res/img/icon128.webp");
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+
+.logo_text{
+    user-select: none;
+    position: absolute;
+    left: 80px;
+    top: 15px;
+    font-size: x-large;
+}
+
 .github_button_text{
     
 }
@@ -49,7 +68,7 @@ body {
 .useraccount{
     margin-left: auto;
     margin-right: 10px;
-    background-image: url("./res/img/useraccount.png");
+    background-image: url("./res/img/useraccount128.webp");
     background-size: contain;
     border-radius: 100%;
     width: 50px;
@@ -65,6 +84,7 @@ body {
 }
 
 .download_button{
+    user-select: none;
     background-color: transparent;
     border-radius: 8px;
     padding: 10px;
