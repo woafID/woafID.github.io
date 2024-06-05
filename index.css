@@ -35,12 +35,18 @@ body {
     border-color: rgb(134, 134, 134);
     background-color: rgb(85, 85, 85);
     border-radius: 0.4rem;
-    width: 150px;
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 90%;
     height: 40px;
     margin-top: 2px;
     position: absolute;
     right: 70px;
+}
+
+#github_button .github_button_text_short{
+    display: none;
 }
 
 .logo{
@@ -57,9 +63,28 @@ body {
     user-select: none;
     position: absolute;
     left: 80px;
-    top: 15px;
+    top: 16px;
     font-size: x-large;
 }
+
+#logo_text .logo_text_short{display: none;}
+
+@media (orientation: portrait) {
+    #logo_text .logo_text_original {
+      display: none;
+    }
+    #logo_text .logo_text_short {
+      display: inline;
+    }
+
+    #github_button .github_button_text{
+        display: none;
+    }
+    #github_button .github_button_text_short{
+        display: inline;
+    }
+}
+  
 
 .github_button_text{
     color: wh;
