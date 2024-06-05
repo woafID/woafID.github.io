@@ -24,6 +24,27 @@ body {
     background-color: rgb(37, 37, 37);
 }
 
+.github_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: solid;
+    border-width: 0.2rem;
+    border-color: rgb(134, 134, 134);
+    background-color: rgb(85, 85, 85);
+    border-radius: 0.4rem;
+    width: 150px;
+    font-size: 90%;
+    height: 40px;
+    margin-top: 2px;
+    position: absolute;
+    right: 70px;
+}
+
+.github_button_text{
+    
+}
 
 .useraccount{
     margin-left: auto;
@@ -48,9 +69,10 @@ body {
     border-radius: 8px;
     padding: 10px;
     max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
     border-style: solid;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 a{
     color: white;
