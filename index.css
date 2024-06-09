@@ -52,7 +52,7 @@ body {
 .logo{
     left: 10px;
     top: 2px;
-    background-image: url("./res/img/icon256.webp");
+    background-image: url("./res/img/linuxcreativesoftware_export.svg");
     background-size: contain;
     width: 60px;
     height: 60px;
@@ -60,6 +60,7 @@ body {
 }
 
 .logo_text{
+    font-family: Mukta-Bold;
     user-select: none;
     position: absolute;
     left: 80px;
@@ -108,6 +109,15 @@ body {
     height: 60px;
 }
 
+
+.buttons_wrapper{
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
 .download_button{
     user-select: none;
     background-color: transparent;
@@ -115,11 +125,41 @@ body {
     padding: 10px;
     max-width: fit-content;
     border-style: solid;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 10px;
 }
 a{
     color: white;
     text-decoration: none;
+}
+
+.uninstall_button{
+    transform: translateY(10px);
+    user-select: none;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: fit-content;
+    max-height: 26.7px;
+    border-style: solid;
+    margin-left: auto;
+}
+
+.pretty_box_purple{
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, rgba(191, 112, 228, 0.336) 100%);
+    height: 200px;
+}
+
+.pretty_box_blue{
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, rgba(112, 129, 228, 0.336) 100%);
+    height: 200px;
+}
+
+.pretty_box_orange{
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, rgba(228, 207, 112, 0.336) 100%);
+    height: 200px;
+}
+
+.pretty_box_carrot{
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, rgba(228, 135, 112, 0.336) 100%);
+    height: 200px;
 }
