@@ -1,0 +1,165 @@
+h1 {
+    text-align: center;
+}
+
+@font-face {
+    font-family: Mukta-Bold;
+    font-weight: 400;
+    font-style: normal;
+    src: url('/res/font/Mukta-Bold.woff2') format('truetype');
+}
+
+@font-face {
+    font-family: Mukta-Regular;
+    font-weight: 400;
+    font-style: normal;
+    src: url('/res/font/Mukta-Regular.woff2') format('truetype');
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: Mukta-Regular;
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+
+.github_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+    border-style: solid;
+    border-width: 0.2rem;
+    border-color: rgb(134, 134, 134);
+    background-color: rgb(85, 85, 85);
+    border-radius: 0.4rem;
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 90%;
+    height: 40px;
+    margin-top: 2px;
+    position: absolute;
+    right: 70px;
+}
+
+#github_button .github_button_text_short{
+    display: none;
+}
+
+.logo{
+    left: 10px;
+    top: 2px;
+    background-image: url("./res/img/linuxcreativesoftware_export.svg");
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+
+.logo_text{
+    font-family: Mukta-Bold;
+    user-select: none;
+    position: absolute;
+    left: 80px;
+    top: 16px;
+    font-size: x-large;
+}
+
+#logo_text .logo_text_short{display: none;}
+
+@media (orientation: portrait) {
+    #logo_text .logo_text_original {
+      display: none;
+    }
+    #logo_text .logo_text_short {
+      display: inline;
+    }
+
+    #github_button .github_button_text{
+        display: none;
+    }
+    #github_button .github_button_text_short{
+        display: inline;
+    }
+}
+  
+
+.github_button_text{
+    color: wh;
+}
+
+.useraccount{
+    margin-left: auto;
+    margin-right: 10px;
+    background-image: url("./res/img/useraccount128.webp");
+    background-size: contain;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+}
+
+.header{
+    padding-top: 10px;
+    background-color: rgb(61, 61, 61);
+    height: 60px;
+}
+
+
+.buttons_wrapper{
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.download_button{
+    user-select: none;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: fit-content;
+    border-style: solid;
+    margin: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.uninstall_button{
+    transform: translateY(10px);
+    user-select: none;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: fit-content;
+    max-height: 26.7px;
+    border-style: solid;
+    margin-left: auto;
+}
+
+.pretty_box_purple{
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, rgba(191, 112, 228, 0.336) 100%);
+    height: 200px;
+}
+
+.pretty_box_blue{
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, rgba(112, 129, 228, 0.336) 100%);
+    height: 200px;
+}
+
+.pretty_box_orange{
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, rgba(228, 207, 112, 0.336) 100%);
+    height: 200px;
+}
+
+.pretty_box_carrot{
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, rgba(228, 135, 112, 0.336) 100%);
+    height: 200px;
+}
