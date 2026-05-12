@@ -6,80 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinuxCreativeSoftware</title>
     <link rel="icon" type="image/x-icon" href="./res/img/linuxcreativesoftware_export.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <div class="logo"></div>
-
-        <div id="logo_text" class="logo_text">
-            <div class="logo_text_original">LinuxCreativeSoftware</div>
-            <div class="logo_text_short">LCS</div>
-        </div>
-
-        <a id="github_button" class="github_button" href="https://github.com/woafID/LinuxCreativeSoftware">
-            <div class="github_button_text">Visit Project's Github</div>
-            <div class="github_button_text_short">Github</div>
-        </a>
-
-        <a class="useraccount" href="https://github.com/woafID">
-        </a>
-
-    </div>
-
-    <div class="pretty_box_purple">
-
-        <h1>
-            Affinity Suite for Linux
-        </h1>
-        <!-- NEVER FORGET TO ESCAPE THE DOUBLE SLASH WITH A BACKSLAS IN THE URLS-->
-        <a href="#"
-            onclick="downloadFile('https:/\/raw.githubusercontent.com/woafID/LinuxCreativeSoftware/master/Affinity_Linux.sh', this)"
-            filename="Affinity_Linux.sh">
-
-            <div class="buttons_wrapper">
-                <!-- FIX DOWNLOAD BUTTON BEING IN DOUBLE LINED ON SMALL SCREENS, EVEN WHEN IT DIDNT REACH SCREEN EDGE -->
-                <div class="download_button" ;>
-                    Download Install Script
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-wrapper">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <span class="full-name">LinuxCreativeSoftware</span>
+                    <span class="short-name">LCS</span>
                 </div>
             </div>
-        </a>
-
-    </div>
-
-    <div class="pretty_box_blue">
-        <h1>
-            Adobe Photoshop for Linux
-        </h1>
-        <div class="buttons_wrapper">
-            <div class="download_button">
-                Coming Soon
-            </div>
+            <nav class="nav-links">
+                <a href="https://github.com/woafID/LinuxCreativeSoftware" class="btn-github">
+                    <span class="full-text">Visit Project's Github</span>
+                    <span class="short-text">Github</span>
+                </a>
+                <a class="user-profile" href="https://github.com/woafID" aria-label="Github Profile"></a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div class="pretty_box_orange">
-        <h1>
-            Adobe Illustrator for Linux
-        </h1>
-        <div class="buttons_wrapper">
-            <div class="download_button">
-                Coming Soon
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Your Creative Tools <br><span class="accent">On Linux</span></h1>
+                <p class="hero-subtitle">The easy way to run your creative suites on Linux.</p>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="pretty_box_carrot">
-        <h1>
-            Image-Line FL Studio for Linux
-        </h1>
-        <div class="buttons_wrapper">
-            <div class="download_button">
-                Coming Soon
+        <section class="software-grid">
+            <div class="container">
+                <div class="card-grid">
+                    <div class="software-card card-purple">
+                        <div class="card-content">
+                            <h2>Affinity Suite</h2>
+                            <p>Professional photo editing, publishing, and graphic design software.</p>
+                            <div class="card-actions">
+                                <a href="javascript:void(0)" class="btn-download"
+                                    onclick="downloadFile('https://raw.githubusercontent.com/woafID/LinuxCreativeSoftware/master/Affinity_Linux.sh', this)"
+                                    filename="Affinity_Linux.sh">
+                                    Download Script
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="software-card card-blue">
+                        <div class="card-content">
+                            <h2>Adobe Photoshop</h2>
+                            <p>The industry standard for image editing and digital art.</p>
+                            <div class="card-actions">
+                                <span class="badge-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="software-card card-orange">
+                        <div class="card-content">
+                            <h2>Adobe Illustrator</h2>
+                            <p>Create vector graphics and illustrations at any scale.</p>
+                            <div class="card-actions">
+                                <span class="badge-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="software-card card-carrot">
+                        <div class="card-content">
+                            <h2>FL Studio</h2>
+                            <p>Complete music production environment for composers and producers.</p>
+                            <div class="card-actions">
+                                <span class="badge-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <div id="download-modal" class="modal">
+        <div class="modal-content">
+            <h3>Installation Instructions</h3>
+            <p>Your download will start in 5 seconds.</p>
+            <p><strong>Important:</strong> You must execute these commands in the directory where the script is located
+                (e.g., Right click and "Open in Terminal").</p>
+            <div class="code-block">
+                <code>chmod +x ./<span class="filename-placeholder"></span></code>
+                <code>./<span class="filename-placeholder"></span></code>
+            </div>
+            <button onclick="closeNotification()" class="btn-close">Got it</button>
         </div>
+        <div class="modal-overlay" onclick="closeNotification()"></div>
     </div>
 
 </body>
