@@ -4,31 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinuxCreativeSoftware</title>
-    <link rel="icon" type="image/x-icon" href="./res/img/linuxcreativesoftware_export.svg">
+    <title>woafID's Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./res/img/useraccount128_rounded.png">
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
 </head>
 
 <body>
     <header class="navbar">
         <div class="container">
             <div class="logo-wrapper">
-                <div class="logo-icon"></div>
                 <div class="logo-text">
-                    <span class="full-name">LinuxCreativeSoftware</span>
-                    <span class="short-name">LCS</span>
+                    <span class="full-name">woafID's Projects</span>
+                    <span class="short-name">woafID</span>
                 </div>
             </div>
             <nav class="nav-links">
-                <a href="https://github.com/woafID/LinuxCreativeSoftware" class="btn-github">
-                    <span class="full-text">Visit Project's Github</span>
-                    <span class="short-text">Github</span>
+                <a class="profile-link" href="https://github.com/woafID?tab=repositories">
+                    <div class="user-profile" aria-label="GitHub Profile"></div>
+                    <span class="profile-text">My GitHub</span>
                 </a>
-                <a class="user-profile" href="https://github.com/woafID" aria-label="Github Profile"></a>
             </nav>
         </div>
     </header>
@@ -36,77 +33,57 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title">Your Creative Tools <br><span class="accent">On Linux</span></h1>
-                <p class="hero-subtitle">The easy way to run your creative suites on Linux.</p>
+                <h1 class="hero-title">Open Source <br><span class="accent">Media Tools</span></h1>
+                <p class="hero-subtitle">A collection of minimal, focused, and privacy-conscious multimedia tools for
+                    Linux and
+                    Android.</p>
             </div>
         </section>
 
-        <section class="software-grid">
+        <section class="projects">
             <div class="container">
-                <div class="card-grid">
-                    <div class="software-card card-purple">
+                <div class="project-grid">
+                    <a href="/LinuxCreativeSoftware" class="project-card accent-green">
                         <div class="card-content">
-                            <h2>Affinity Suite</h2>
-                            <p>Professional photo editing, publishing, and graphic design software.</p>
-                            <div class="card-actions">
-                                <a href="javascript:void(0)" class="btn-download"
-                                    onclick="downloadFile('https://raw.githubusercontent.com/woafID/LinuxCreativeSoftware/master/Affinity_Linux.sh', this)"
-                                    filename="Affinity_Linux.sh">
-                                    Download Script
-                                </a>
-                            </div>
+                            <h2>LinuxCreativeSoftware</h2>
+                            <p>The easy way to run your favorite creative suites on Linux.</p>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="software-card card-blue">
+                    <a href="/ModernTranscoder" class="project-card accent-yellow">
                         <div class="card-content">
-                            <h2>Adobe Photoshop</h2>
-                            <p>The industry standard for image editing and digital art.</p>
-                            <div class="card-actions">
-                                <span class="badge-soon">Coming Soon</span>
-                            </div>
+                            <h2>ModernTranscoder</h2>
+                            <p>Powerful, privacy-focused media transcoding for Android.</p>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="software-card card-orange">
+                    <a href="/MediainfoGUI" class="project-card accent-blue">
                         <div class="card-content">
-                            <h2>Adobe Illustrator</h2>
-                            <p>Create vector graphics and illustrations at any scale.</p>
-                            <div class="card-actions">
-                                <span class="badge-soon">Coming Soon</span>
-                            </div>
+                            <h2>MediainfoGUI</h2>
+                            <p>Inspect media file metadata directly in your browser.</p>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="software-card card-carrot">
+                    <a href="/MiniView" class="project-card accent-orange">
                         <div class="card-content">
-                            <h2>FL Studio</h2>
-                            <p>Complete music production environment for composers and producers.</p>
-                            <div class="card-actions">
-                                <span class="badge-soon">Coming Soon</span>
-                            </div>
+                            <h2>MiniView</h2>
+                            <p>Lightweight image gallery and file browser built with Python.</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="download-modal" class="modal">
-        <div class="modal-content">
-            <h3>Installation Instructions</h3>
-            <p>Your download will start in 5 seconds.</p>
-            <p><strong>Important:</strong> You must execute these commands in the directory where the script is located
-                (e.g., Right click and "Open in Terminal").</p>
-            <div class="code-block">
-                <code>chmod +x ./<span class="filename-placeholder"></span></code>
-                <code>./<span class="filename-placeholder"></span></code>
-            </div>
-            <button onclick="closeNotification()" class="btn-close">Got it</button>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> woafID. Minimal by design.</p>
+            <p>Individual projects are licensed under GPL, MIT, or others. See repositories for details.</p>
         </div>
-        <div class="modal-overlay" onclick="closeNotification()"></div>
-    </div>
-
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

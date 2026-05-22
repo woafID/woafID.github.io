@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernTranscoder - Privacy-Focused Media Transcoding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../res/img/useraccount128_rounded.png">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="/" class="btn-back">All Projects</a>
+                <div class="logo-text">
+                    <span class="full-name">ModernTranscoder</span>
+                    <span class="short-name">Transcoder</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a class="profile-link" href="https://github.com/woafID?tab=repositories">
+                    <div class="user-profile" aria-label="GitHub Profile"></div>
+                    <span class="profile-text">My GitHub</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Powerful Transcoding <br><span class="accent">On Android</span></h1>
+                <p class="hero-subtitle">A privacy-focused media transcoding application for Android. Granular control, offline first, and modern hardware support.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="card-grid">
+                    <div class="feature-card">
+                        <h2>Privacy First</h2>
+                        <p>Completely offline with no network permissions. Your media stays on your device.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h2>Advanced Control</h2>
+                        <p>Fine-tune Video/Audio codecs, resolutions, bitrates, and encoding presets like a pro.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h2>Android 15+ Ready</h2>
+                        <p>Built with 16KB-page-size aligned binaries for the latest Android hardware.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <a href="https://github.com/woafID/ModernTranscoder" class="btn-primary">View on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> woafID. Minimal by design.</p>
+            <p>Individual projects are licensed under GPL, MIT, or others. See repositories for details.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

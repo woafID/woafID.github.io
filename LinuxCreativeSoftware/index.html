@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinuxCreativeSoftware</title>
+    <link rel="icon" type="image/png" href="../res/img/useraccount128_rounded.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="/" class="btn-back">All Projects</a>
+                <div class="logo-text">
+                    <span class="full-name">LinuxCreativeSoftware</span>
+                    <span class="short-name">LCS</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a class="profile-link" href="https://github.com/woafID?tab=repositories">
+                    <div class="user-profile" aria-label="GitHub Profile"></div>
+                    <span class="profile-text">My GitHub</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Your Creative Tools <br><span class="accent">On Linux</span></h1>
+                <p class="hero-subtitle">The easy way to run your creative suites on Linux.</p>
+            </div>
+        </section>
+
+        <section class="software-grid">
+            <div class="container">
+                <div class="card-grid">
+                    <div class="software-card card-purple">
+                        <div class="card-content">
+                            <h2>Affinity Suite</h2>
+                            <p>Professional photo editing, publishing, and graphic design software.</p>
+                            <div class="card-actions">
+                                <a href="javascript:void(0)" class="btn-download"
+                                    onclick="downloadFile('https://raw.githubusercontent.com/woafID/LinuxCreativeSoftware/master/Affinity_Linux.sh', this)"
+                                    filename="Affinity_Linux.sh">
+                                    Download Script
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="software-card card-blue">
+                        <div class="card-content">
+                            <h2>Adobe Photoshop</h2>
+                            <p>The industry standard for image editing and digital art.</p>
+                            <div class="card-actions">
+                                <span class="badge-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="software-card card-orange">
+                        <div class="card-content">
+                            <h2>Adobe Illustrator</h2>
+                            <p>Create vector graphics and illustrations at any scale.</p>
+                            <div class="card-actions">
+                                <span class="badge-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="software-card card-carrot">
+                        <div class="card-content">
+                            <h2>FL Studio</h2>
+                            <p>Complete music production environment for composers and producers.</p>
+                            <div class="card-actions">
+                                <span class="badge-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <a href="https://github.com/woafID/LinuxCreativeSoftware" class="btn-primary">View on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> woafID. Minimal by design.</p>
+            <p>Individual projects are licensed under GPL, MIT, or others. See repositories for details.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <div id="download-modal" class="modal">
+        <div class="modal-content">
+            <h3>Installation Instructions</h3>
+            <p>Your download will start in 5 seconds.</p>
+            <p><strong>Important:</strong> You must execute these commands in the directory where the script is located
+                (e.g., Right click and "Open in Terminal").</p>
+            <div class="code-block">
+                <code>chmod +x ./<span class="filename-placeholder"></span></code>
+                <code>./<span class="filename-placeholder"></span></code>
+            </div>
+            <button onclick="closeNotification()" class="btn-close">Got it</button>
+        </div>
+        <div class="modal-overlay" onclick="closeNotification()"></div>
+    </div>
+
+</body>
+
+</html>

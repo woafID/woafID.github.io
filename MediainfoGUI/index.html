@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediainfoGUI - Media Metadata Inspector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../res/img/useraccount128_rounded.png">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="/" class="btn-back">All Projects</a>
+                <div class="logo-text">
+                    <span class="full-name">MediainfoGUI</span>
+                    <span class="short-name">Mediainfo</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a class="profile-link" href="https://github.com/woafID?tab=repositories">
+                    <div class="user-profile" aria-label="GitHub Profile"></div>
+                    <span class="profile-text">My GitHub</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Inspect Media <br><span class="accent">In Your Browser</span></h1>
+                <p class="hero-subtitle">A simple web interface for MediaInfo. Fast, private, and local-only processing.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="card-grid">
+                    <div class="feature-card">
+                        <h2>Local Processing</h2>
+                        <p>Uses mediainfo.js (WASM) to process files locally. Your data never leaves your computer.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h2>Drag & Drop</h2>
+                        <p>Simply drop your media files to see detailed metadata instantly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h2>Syntax Highlighting</h2>
+                        <p>Clean, readable text output with highlighted metadata fields.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <a href="https://github.com/woafID/MediainfoGUI" class="btn-primary">View on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> woafID. Minimal by design.</p>
+            <p>Individual projects are licensed under GPL, MIT, or others. See repositories for details.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

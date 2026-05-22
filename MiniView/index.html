@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniView - Python Image Browser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../res/img/useraccount128_rounded.png">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="/" class="btn-back">All Projects</a>
+                <div class="logo-text">
+                    <span class="full-name">MiniView</span>
+                    <span class="short-name">MiniView</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a class="profile-link" href="https://github.com/woafID?tab=repositories">
+                    <div class="user-profile" aria-label="GitHub Profile"></div>
+                    <span class="profile-text">My GitHub</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Browse Your Images <br><span class="accent">With Simplicity</span></h1>
+                <p class="hero-subtitle">A simple image gallery and file browser built with Python and PyQt6. Lightweight and fast.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="card-grid">
+                    <div class="feature-card">
+                        <h2>Thumbnail Grid</h2>
+                        <p>Fast thumbnail view for images and folders with adjustable sizes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h2>File Management</h2>
+                        <p>Basic file operations like copy, cut, paste, and delete built-in.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h2>Multi-threaded</h2>
+                        <p>Smooth performance with multi-threaded thumbnail loading.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <a href="https://github.com/woafID/MiniView" class="btn-primary">View on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> woafID. Minimal by design.</p>
+            <p>Individual projects are licensed under GPL, MIT, or others. See repositories for details.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
