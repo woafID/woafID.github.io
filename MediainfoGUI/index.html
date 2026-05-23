@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediainfoGUI - Media Metadata Inspector</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../res/img/useraccount128_rounded.png">
-    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <header class="navbar">
         <div class="container">
             <div class="logo-wrapper">
-                <a href="/" class="btn-back">All Projects</a>
+                <a href="../" class="btn-back">All Projects</a>
                 <div class="logo-text">
                     <span class="full-name">MediainfoGUI</span>
                     <span class="short-name">Mediainfo</span>
@@ -29,36 +29,39 @@
         </div>
     </header>
 
-    <main>
+    <main class="main-content">
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Inspect Media <br><span class="accent">In Your Browser</span></h1>
-                <p class="hero-subtitle">A simple web interface for MediaInfo. Fast, private, and local-only processing.</p>
+                <p class="hero-subtitle">Drag & Drop any media file to inspect its properties locally and privately.</p>
             </div>
         </section>
 
-        <section class="features">
+        <section class="tool-section">
             <div class="container">
-                <div class="card-grid">
-                    <div class="feature-card">
-                        <h2>Local Processing</h2>
-                        <p>Uses mediainfo.js (WASM) to process files locally. Your data never leaves your computer.</p>
+                <div id="dropzone" class="dropzone">
+                    <div class="dropzone-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        <p>Drop media file here</p>
+                        <span class="file-hint">or click to browse</span>
+                        <input type="file" id="file-input" style="display: none;">
                     </div>
-                    <div class="feature-card">
-                        <h2>Drag & Drop</h2>
-                        <p>Simply drop your media files to see detailed metadata instantly.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h2>Syntax Highlighting</h2>
-                        <p>Clean, readable text output with highlighted metadata fields.</p>
+                    
+                    <div id="loading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>Analyzing file...</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="cta">
-            <div class="container">
-                <a href="https://github.com/woafID/MediainfoGUI" class="btn-primary">View on GitHub</a>
+                <div id="output-container" class="output-container hidden">
+                    <div class="output-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="filename" id="output-filename">result.txt</span>
+                    </div>
+                    <pre id="output"></pre>
+                </div>
             </div>
         </section>
     </main>
@@ -69,8 +72,11 @@
             <p>Individual projects are licensed under GPL, MIT, or others. See repositories for details.</p>
         </div>
     </footer>
+
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    <script src="lib/mediainfo.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
